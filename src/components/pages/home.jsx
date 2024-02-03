@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div className='bg-gradient-dark-blue min-h-screen p-52'>
+    <div className='bg-gradient-dark-blue min-h-screen p-10 md:p-52'>
       <div className='grid justify-center w-full text-center py-10'>
         <form className='flex justify-center border border-light rounded py-1 px-2 text-white' onSubmit={handleSubmit}>
           <input
@@ -34,10 +34,10 @@ const Home = () => {
           </button>
         </form>
       </div>
-      <div className='rounded p-5'>
+      <div className='rounded p-0 md:p-5'>
         {weather && Object.keys(weather).length === 0 && <WelcomeDiv/>}
       </div>
-      <div className='rounded p-5'>
+      <div className='rounded p-0 md:p-5'>
         {weather && Object.keys(weather).length !== 0 && <WeatherInfo prop={weather} />}
       </div>
     </div>

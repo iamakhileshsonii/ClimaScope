@@ -42,16 +42,16 @@ const formatTime = (timestamp) => {
 
   return (
     <div className='block w-full'>
-      <div className='flex justify-between w-full'>
-        <div className='block w-1/3 self-start align-middle'>
+      <div className='block justify-between w-full md:flex'>
+        <div className='block w-full md:w-1/3 self-start align-middle'>
           <div className='grid justify-center'>{iconWeather && <img src={iconWeather} alt="" className='h-20 w-20'/>}</div>
           <h3 className='text-white italic text-xl text-center py-2'>{name || "Chandigarh"}</h3>
           <h3 className='text-white font-bold text-5xl text-center'>{main?.temp || '10'}°C</h3>
           <p className='text-white text-lg text-center'>{weatherDescription}</p>
         </div>
 
-        <div className='flex w-2/3 rounded-lg p-5'>
-            <div className='block w-1/2 bg-glass rounded-lg p-5 m-2 transition delay-100 duration-300 ease-in-out hover:-translate-y-2'>
+        <div className='flex w-full md:w-2/3 rounded-lg p-0 md:p-5'>
+            <div className='w-full block md:w-1/2 bg-glass rounded-lg p-5 m-2 transition delay-100 duration-300 ease-in-out hover:-translate-y-2'>
 
               <div className='flex justify-between'>
                 <p className='text-white text-sm text-center'>Longitude: {coord?.lon || '12.122'}</p>
@@ -65,7 +65,7 @@ const formatTime = (timestamp) => {
               
             </div>
 
-            <div className='block w-1/2 bg-glass rounded-lg p-5 m-2 transition delay-100 duration-300 ease-in-out hover:-translate-y-2'>
+            <div className='w-full block md:w-1/2 bg-glass rounded-lg p-5 m-2 transition delay-100 duration-300 ease-in-out hover:-translate-y-2'>
               <div className='flex justify-between'>
                 <p className='text-white text-sm text-center'>Max Temp: {main?.temp_max || "10"}°C</p>
                 <p className='text-white text-sm text-center'>Min temp: {main?.temp_max || "17"}°C</p>
